@@ -393,8 +393,8 @@ class compression:
 
                                                                                 size_after_block2=len(Reapeat5)
 
-                                                                                if size_of_block2>size_after_block2+2 and size_after_block2<size_after_block:
-                                                                                    Repeat=1
+                                                            
+    
                                                                                     #print(Reapeat5)
                                                                                     
                                                                                     
@@ -402,7 +402,10 @@ class compression:
                                                                                     
                                                                                 
 
-                                                                                size_after_block=len(size_data7)
+                                                                                size_after_block=len(size_data7) 
+                                                                                if size_of_block2>size_after_block2+2 and size_after_block2<size_after_block:
+                                                                                	Repeat=1
+                                                                                
                                                                                 #print(size_after_block)
 
 
