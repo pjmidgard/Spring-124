@@ -43,7 +43,7 @@ class compression:
                     if name[long-4:long]==".doc":
                     	Deep_long=999999999999999999
                     	Deep_long_All=0
-                    	block_size_long=63
+                    	block_size_long=31
                     	Times_compression=1
                     	Doc=1
                     elif name[long-4:long]!=".doc":
@@ -342,32 +342,54 @@ class compression:
 
                                                                                 block2=0
 
-                                                                                long3=len(add_bits118)
-                                                                                Reapeat=Zeroes[block:block+8]
+                                                                                long3=len(Zeroes)
+                                                                                Reapeat=Zeroes[block2:block2+8]
+                                                                                
+                                                                                
                                                                                 Reapeat3=0
                                                                                 Reapeat4=""
                                                                                 Reapeat5=""
                                                                                 block2=8
+                                                                                Spin=0
                                                                                 
 
 
                                                                                 while block2<long3:
-                                                                                    Reapeat2=Zeroes[block:block+8]
-                                                                                    if Reapeat2==Reapeat:
+                                                                                    Reapeat2=Zeroes[block2:block2+8]
+                                                                                
+                                                                                    
+                                                                                    
+                                                                                    
+                                                                                    if Reapeat2==Reapeat and Spin==0:
                                                                                         Reapeat3=Reapeat3+1
-                                                                                    else:
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                        
+                                                                                    elif Reapeat2!=Reapeat or Spin==1:
                                                                                         Reapeat4=Reapeat4+Reapeat2
+                                                                                        Spin=1
+                                                                                        
+                                                                                        
+                                                                                        
                                                                                     block2=block2+8
+                                                                                    if block2>long3:
+                                                                                        block2=long3
+                                                                                        
                                                                                         
                                                                                 
                                                                                 
-                                                                                Reapeat6=format(Reapeat3,'03b')
+                                                                                Reapeat6=format(Reapeat3,'02b')
+                                                                                
+                                                                                
                                                                                 Reapeat5=Reapeat+Reapeat6+Reapeat4
 
                                                                                 size_after_block2=len(Reapeat5)
 
                                                                                 if size_of_block>size_after_block2+2:
                                                                                     Repeat=1
+                                                                                    #print(Reapeat3)
+                                                                                    
                                                                                     
                                                                                         
                                                                                     
