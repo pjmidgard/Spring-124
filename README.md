@@ -2,4 +2,6 @@
 Spring-124
 Compression lossless
 
-Compression zeros. Long_zeros_max+info1+info2 and Brotlicffi.
+
+Brotlicffi and Spring-124
+Compression zeros. Long_zeros_max+info1+info2
