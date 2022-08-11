@@ -36,7 +36,7 @@ class compression:
 
                     long=len(name)
 
-                    Doc=0
+                    
 
                     
                     
@@ -242,15 +242,11 @@ class compression:
                                                     long_block=block_size_long
                                                     long2=len(size_data3)
                                                     
-                                                    if Doc==1:
+                                                    
                                                        
-                                                        Deep_long=long2//long_block
-                                                        b=format(Deep_long,'048b')
-                                                        if len(b)>48:
-                                                            print("File too big")
-                                                            raise SystemExit
-                                                    
-                                                    
+                                                     
+                                  
+                                                 
                                                     start=0
                                                     blocks=long_block
                                                     size_compress=63
@@ -367,10 +363,10 @@ class compression:
                                         long_after=len(size_data3)
                                         long2=len(size_data3)
 
-                                        if Doc==1:
-                                            size_data9=b+size_data3
-                                        else:
-                                            size_data9=size_data3
+                                        
+                                        size_data9=size_data3
+                                        
+                                           
 
                                         
                                         long_file=len(size_data10)
@@ -420,6 +416,7 @@ class compression:
                                     qqwslenf="%0"+qqwslenf+"x"
                              
                                     jl=binascii.unhexlify(qqwslenf % n)
+                                    
                                     
                                     
                                 
@@ -476,7 +473,7 @@ class compression:
                     
                     long=len(nameas)
 
-                    Doc=0
+                    
                     
                     
                     
@@ -674,10 +671,7 @@ class compression:
                                                    
                                                     blocks=long_block
                                                     long2=len(size_data3)
-                                                    if Doc==1:
-                                                       
-                                                        Deep_long=int(size_data3[:48],2)
-                                                        size_data3=size_data3[48:]
+                                                   
                                                     size_compress=63
                                                     end=blocks
                                                     
