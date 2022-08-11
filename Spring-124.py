@@ -42,9 +42,9 @@ class compression:
                     
                    
                     
-                    Deep_long=60
-                    Deep_long_All=Deep_long*31
-                    block_size_long=31
+                    Deep_long=120
+                    Deep_long_All=Deep_long*15
+                    block_size_long=15
                     Times_compression=1
                     	
                     nameas=name+".bin"
@@ -481,9 +481,9 @@ class compression:
                     
                     
                     
-                    Deep_long=60
-                    Deep_long_All=Deep_long*31
-                    block_size_long=31
+                    Deep_long=30
+                    Deep_long_All=Deep_long*15
+                    block_size_long=15
                     Times_compression=1
                     	
                     
