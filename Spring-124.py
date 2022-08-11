@@ -40,17 +40,12 @@ class compression:
 
                     
                     
-                    if name[long-4:long]==".doc":
-                    	Deep_long=999999999999999999
-                    	Deep_long_All=0
-                    	block_size_long=63
-                    	Times_compression=1
-                    	Doc=1
-                    elif name[long-4:long]!=".doc":
-                    	Deep_long=120
-                    	Deep_long_All=Deep_long*31
-                    	block_size_long=31
-                    	Times_compression=1
+                   
+                    
+                    Deep_long=120
+                    Deep_long_All=Deep_long*31
+                    block_size_long=31
+                    Times_compression=1
                     	
                     nameas=name+".bin"
                 
@@ -100,6 +95,8 @@ class compression:
 
                        # Read the whole file at once
                         data = binary_file.read()
+                        import brotlicffi
+                        data= brotlicffi.compress(data)
                         if len(data)==0:
                             x4=0.0
                             print(x4)
@@ -481,17 +478,12 @@ class compression:
 
                     Doc=0
                     
-                    if nameas[long-4:long]==".doc":
-                    	Deep_long=999999999999999999
-                    	Deep_long_All=0
-                    	block_size_long=63
-                    	Times_compression=1
-                    	Doc=1
-                    elif nameas[long-4:long]!=".doc":
-                    	Deep_long=120
-                    	Deep_long_All=Deep_long*31
-                    	block_size_long=31
-                    	Times_compression=1
+                    
+                    
+                    Deep_long=120
+                    Deep_long_All=Deep_long*31
+                    block_size_long=31
+                    Times_compression=1
                     	
                     
                     
@@ -541,6 +533,9 @@ class compression:
                        # Read the whole file at once
                         
                         data = binary_file.read()
+                        import brotlicffi
+                        data= brotlicffi.decompress(data)
+                        
                         if len(data)==0:
                             x4=0.0
                             print(x4)
