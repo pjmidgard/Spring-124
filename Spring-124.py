@@ -21,7 +21,7 @@ class compression:
                     else:
                             print('Path is not exists!')
                             raise SystemExit
-                    Deep=100
+                   
                     long_block=100
                         
                     namea="file.W"
@@ -51,11 +51,6 @@ class compression:
                     	Deep_long_All=Deep_long*31
                     	block_size_long=31
                     	Times_compression=1
-
-
-                    Repeat11=1024
-
-                    
                     	
                     nameas=name+".bin"
                 
@@ -203,8 +198,8 @@ class compression:
                                 predict=-1
                                 
                                 long_block=16
-                                Find=1
-                                Left_Right=0
+                               
+                               
                                 
                                 
                                 times_of_times=0
@@ -238,7 +233,7 @@ class compression:
                                     block_compression2=0
                                     
                                     start=-1
-                                    Left_Right=0
+                                    
                                     Find_guess=0
                                     while Find_guess!=1:
                                         
@@ -263,7 +258,6 @@ class compression:
                                                     blocks=long_block
                                                     size_compress=63
                                                     end=blocks
-                                                    Repeat=0
                                                     
                                                      
                                                     block=0
@@ -278,12 +272,12 @@ class compression:
                                                         
                                                     
                                                     
-                                                    Find=1
+                                                   
 
-                                                    Left_Right=Left_Right+1
+                                                    
 
-                                                    if Left_Right==2:
-                                                        Left_Right=1
+                                                   
+  
                                                     
                                                     long=len(size_data3)
                                                     #print(long)
@@ -292,9 +286,7 @@ class compression:
 
                                                                                 Times6=Times6+1
                                                                                 Zeroes=size_data3[block:block+blocks]
-                                                                                Repeat10=size_data3[block:block+Repeat11]
                                                                                 size_of_block=len(Zeroes)
-                                                                                size_of_block2=len(Repeat10)
                                                                                 #print(size_of_block)
 
                                                                                 Zeroes_number=int(Zeroes,2)
@@ -321,9 +313,6 @@ class compression:
                                                                                                                                                                 
                                                                                 MAX_zeroes=bin(long_block)[2:]
                                                                                 Size_max_zeroes=len(MAX_zeroes)
-
-                                                                                
-                                                                                
                                                                                 
                                                                                 lenf=len(add_bits118)
                                                                                 size_data26=bin(lenf)[2:]
@@ -346,98 +335,22 @@ class compression:
                                                                                                                                                                             
                                                                                 size_data7=add_bits118+size_data26+size_data24
 
-
-                                                                                block2=0
-
-                                                                                long3=len(Repeat10)
-                                                                                Reapeat=Repeat10[block2:block2+8]
-                                                                                
-                                                                                
-                                                                                Reapeat3=0
-                                                                                Reapeat4=""
-                                                                                Reapeat5=""
-                                                                                block2=8
-                                                                                Spin=0
-                                                                                
-
-
-                                                                                while block2<long3:
-                                                                                    Reapeat2=Repeat10[block2:block2+8]
-                                                                                
-                                                                                    
-                                                                                    
-                                                                                    
-                                                                                    if Reapeat2==Reapeat and Spin==0:
-                                                                                        Reapeat3=Reapeat3+1
-                                                                                        
-                                                                                        
-                                                                                        
-                                                                                        
-                                                                                    elif Reapeat2!=Reapeat or Spin==1:
-                                                                                        Reapeat4=Reapeat4+Reapeat2
-                                                                                        Spin=1
-                                                                                        
-                                                                                        
-                                                                                        
-                                                                                    block2=block2+8
-                                                                                    if block2>long3:
-                                                                                        block2=long3
-                                                                                        
-                                                                                        
-                                                                                
-                                                                                
-                                                                                Reapeat6=format(Reapeat3,'07b')
-                                                                                
-                                                                                
-                                                                                Reapeat5=Reapeat+Reapeat6+Reapeat4
-
-                                                                                size_after_block2=len(Reapeat5)
-
-                                                            
-    
-                                                                                    #print(Reapeat5)
-                                                                                    
-                                                                                    
-                                                                                        
-                                                                                    
-                                                                                
-
-                                                                                size_after_block=len(size_data7) 
-                                                                                if size_of_block2>size_after_block2+2 and size_after_block2<size_after_block:
-                                                                                	Repeat=1
-                                                                                
+                                                                                size_after_block=len(size_data7)
                                                                                 #print(size_after_block)
 
 
                                                                                 if Times6>=Deep_long or size_of_block!=long_block or  len(data)<=Deep_long_All:
                                                                                     size_data4=Zeroes
-                                                                                    block=block+blocks
 
-                                                                                elif size_of_block<=size_after_block+2 and Times6<Deep_long and size_of_block==long_block and Doc==1:
+                                                                                elif size_of_block<=size_after_block+1 and Times6<Deep_long and size_of_block==long_block:
                                                                                     size_data4="0"+Zeroes
-                                                                                    block=block+blocks
-
-                                                                                elif size_of_block<=size_after_block+1 and Times6<Deep_long and size_of_block==long_block and Doc==0:
-                                                                                    size_data4="0"+Zeroes
-                                                                                    block=block+blocks
                                                                                     
-                                                                                elif size_of_block>size_after_block+1 and Times6<=Deep_long and size_of_block==long_block and Doc==0: 
+                                                                                elif size_of_block>size_after_block+1 and Times6<=Deep_long and size_of_block==long_block:
                                                                                     size_data4="1"+size_data7
-                                                                                    block=block+blocks
-
-    
-                                                                                elif size_of_block>size_after_block+2 and Times6<=Deep_long and size_of_block==long_block and Doc==1:
-                                                                                    size_data4="10"+size_data7
-                                                                                    block=block+blocks
-
-                                                                                elif  Repeat==1 and Times6<=((Deep_long*block_size_long)//Repeat11) and size_of_block==long_block and Doc==1:
-                                                                                    size_data4="11"+Reapeat5
-                                                                                    Repeat=0
-                                                                                    block=block+Repeat11
                                                                                     
                                                                                 
                                                                                 size_data6=size_data6+size_data4       
-                                                                                
+                                                                                block=block+blocks
                                                                                 #print(block)
                                                          
                                                     times_compression=times_compression+1
@@ -501,6 +414,7 @@ class compression:
                                     
                                     
                                     
+                                    
                                     n = int(size_data11, 2)
                                 
                                     qqwslenf=len(size_data11)
@@ -509,6 +423,8 @@ class compression:
                                     qqwslenf="%0"+qqwslenf+"x"
                              
                                     jl=binascii.unhexlify(qqwslenf % n)
+                                    import brotlicffi
+                                    jl= brotlicffi.compress(jl)
                                 
                                     size_after=len(jl)
                                    
@@ -559,7 +475,7 @@ class compression:
                     nameas=name[:name_long-name_cut]
                     nac=len(nameas)
                     
-                    Deep=1000
+                  
                     
                     long=len(nameas)
 
@@ -943,6 +859,8 @@ class compression:
                                     qqwslenf="%0"+qqwslenf+"x"
                              
                                     jl=binascii.unhexlify(qqwslenf % n)
+                                    import brotlicffi
+                                    jl= brotlicffi.decompress(jl)
                                  
                                
                                     sssssw=len(jl) 
