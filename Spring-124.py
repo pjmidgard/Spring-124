@@ -42,7 +42,7 @@ class compression:
                     
                    
                     
-                    Deep_long=120
+                    Deep_long=60
                     Deep_long_All=Deep_long*31
                     block_size_long=31
                     Times_compression=1
@@ -97,6 +97,8 @@ class compression:
                         data = binary_file.read()
                         import brotlicffi
                         data= brotlicffi.compress(data)
+                        size_after2=len(data)
+                        #print(size_after2)
                         if len(data)==0:
                             x4=0.0
                             print(x4)
@@ -408,6 +410,7 @@ class compression:
                                     
                                     
                                     
+                                    
                                     n = int(size_data11, 2)
                                 
                                     qqwslenf=len(size_data11)
@@ -421,6 +424,7 @@ class compression:
                                     
                                 
                                     size_after=len(jl)
+                                    #print(size_after)
                                    
                                     qqqwz=qqqwz+1
                                     szxzzza=""
@@ -477,7 +481,7 @@ class compression:
                     
                     
                     
-                    Deep_long=120
+                    Deep_long=60
                     Deep_long_All=Deep_long*31
                     block_size_long=31
                     Times_compression=1
