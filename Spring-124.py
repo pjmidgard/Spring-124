@@ -420,8 +420,8 @@ class compression:
                                     qqwslenf="%0"+qqwslenf+"x"
                              
                                     jl=binascii.unhexlify(qqwslenf % n)
-                                    import brotlicffi
-                                    jl= brotlicffi.compress(jl)
+                                    
+                                    
                                 
                                     size_after=len(jl)
                                    
@@ -533,8 +533,7 @@ class compression:
                        # Read the whole file at once
                         
                         data = binary_file.read()
-                        import brotlicffi
-                        data= brotlicffi.decompress(data)
+                        
                         
                         if len(data)==0:
                             x4=0.0
@@ -856,6 +855,8 @@ class compression:
                                     jl=binascii.unhexlify(qqwslenf % n)
                                     import brotlicffi
                                     jl= brotlicffi.decompress(jl)
+                                   
+                                    
                                  
                                
                                     sssssw=len(jl) 
