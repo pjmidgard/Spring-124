@@ -481,7 +481,7 @@ class compression:
                     
                     
                     
-                    Deep_long=30
+                    Deep_long=120
                     Deep_long_All=Deep_long*15
                     block_size_long=15
                     Times_compression=1
